@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [UrbanLadderPOM]">
+  <test name="Test">
+    <classes>
+      <class name="TestCases.BookShelvesUnitTest"/>
+      <class name="TestCases.ChairsUnitTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="TestCases.ChairsUnitTest">
+        <methods>
+          <include name="ChairsTest1"/>
+          <include name="tearDown"/>
+          <include name="flushReports"/>
+        </methods>
+      </class> <!-- TestCases.ChairsUnitTest -->
+      <class name="TestCases.BookShelvesUnitTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="flushReports"/>
+        </methods>
+      </class> <!-- TestCases.BookShelvesUnitTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [UrbanLadderPOM] -->

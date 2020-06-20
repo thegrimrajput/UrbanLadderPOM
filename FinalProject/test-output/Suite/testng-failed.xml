@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
+    <classes>
+      <class name="TestCases.LoginBookShelvesIntegerationTest"/>
+      <class name="TestCases.LoginChairsIntegrationTest"/>
+      <class name="TestCases.BookshelvesChairsIntegrationTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="TestCases.BookshelvesChairsIntegrationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="BookshelvesChairsIntegrationTest1"/>
+          <include name="flushReports"/>
+        </methods>
+      </class> <!-- TestCases.BookshelvesChairsIntegrationTest -->
+      <class name="TestCases.LoginChairsIntegrationTest">
+        <methods>
+          <include name="LoginChairsIntegrationTest2" invocation-numbers="0 1 2 3"/>
+          <include name="tearDown"/>
+          <include name="LoginChairsIntegrationTest1" invocation-numbers="1 2 3"/>
+          <include name="flushReports"/>
+        </methods>
+      </class> <!-- TestCases.LoginChairsIntegrationTest -->
+      <class name="TestCases.LoginBookShelvesIntegerationTest">
+        <methods>
+          <include name="LoginBookshelvesIntegrationTest1" invocation-numbers="1 2 3"/>
+          <include name="LoginBookshelvesIntegrationTest2" invocation-numbers="1 2 3"/>
+          <include name="tearDown"/>
+          <include name="flushReports"/>
+        </methods>
+      </class> <!-- TestCases.LoginBookShelvesIntegerationTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
